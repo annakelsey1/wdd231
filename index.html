@@ -13,35 +13,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<body>
     <header>
         <img src="images/annakheadshot.jpg" alt="Profile Picture of Anna Kelsey">
         <h1>Anna Kelsey</h1>
     </header>
+    
+    <nav>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-list">
+            <li><a href="#" class="current">Home</a></li>
+            <li><a href="#" class="placeholder">Chamber</a></li>
+            <li><a href="#" class="placeholder">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/anna-kelsey-2499a229b/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav> 
+
     <main>
-        <section>
-            <nav>
-                <button id="hamburger" class="hamburger" aria-label="Toggle navigation">&#9776;</button>
-                <ul class="nav-list">
-                    <li><a href="#" class="current">Home</a></li>
-                    <li><a href="#" class="placeholder">Chamber</a></li>
-                    <li><a href="#" class="placeholder">GitHub Profile</a></li>
-                    <li><a href="https://www.linkedin.com/in/anna-kelsey-2499a229b/" target="_blank">LinkedIn</a></li>
-                </ul>
-            </nav> 
-        </section>
         <section>
             <h2>Course Work</h2>
             <ul>
                 <li>Lorem Ipsum 1</li>
                 <li>Lorem Ipsum 2</li>
                 <li>Lorem Ipsum 3</li>
-              </ul>
+            </ul>
         </section>
+
         <section>
             <h2>Helsinki, Finland</h2>
             <img src="images/finland.jpg" alt="Finnish Street">
             <p>Finnish Street</p>
         </section>
+
         <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="buttons">
@@ -52,6 +55,7 @@
             <div id="courses"></div>
         </section>
     </main>
+
     <footer>
         <p>&copy; <span id="current-year"></span>╰(*°▽°*)╯ Anna Kelsey - Utah ╰(*°▽°*)╯ Utah</p>
         <p id="lastModified"></p>

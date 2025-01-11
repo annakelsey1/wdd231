@@ -35,5 +35,5 @@ displayCourses(courses);
 
 // Hamburger Menu Toggle
 document.querySelector('#hamburger').addEventListener('click', function() {
-  document.querySelector('nav').classList.toggle('active');
+  document.querySelector('nav').classList.toggle('active'); // Ensure the active class is being toggled
 });

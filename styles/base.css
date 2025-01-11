@@ -15,23 +15,21 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding: 20px;
+    margin: 0;
     display: grid;
-    grid-template-rows: auto auto; /* Header and nav stacked */
-    grid-template-columns: repeat(3, 1fr); /* Grid layout for other sections */
+    grid-template-rows: auto auto; /* Flexible rows for header and content */
+    grid-template-columns: 1fr; /* Single column by default */
     gap: 20px;
 }
 
-/* General reset for elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header styles */
 header {
-    grid-column: span 3; /* Spans all columns */
+    grid-column: 1; /* Header spans one column by default */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,413 +43,188 @@ header img {
     border-radius: 50%;
 }
 
-/* Navigation section */
-section:nth-of-type(1) {
-    grid-column: span 3; /* Spans all columns */
-    background-color: var(--primary-color);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--accent-color);
-}
-
-nav a.current {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-
-
-/* Main grid layout for other sections */
-section:nth-of-type(n+2) {
-    border: 2px solid var(--secondary-color);
-    border-radius: 8px;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Course Work and Helsinki sections */
-section:nth-of-type(2) {
-    grid-column: span 2; /* Spans the first two columns */
-}
-
-section:nth-of-type(3) {
-    grid-column: 3 / 4; /* Occupies the third column */
-}
-
-section:nth-of-type(2),
-section:nth-of-type(3) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px; /* Ensures consistent box size */
-}
-
-/* Certificate section spans all columns */
-.certificate {
-    grid-column: span 3; /* Spans all three columns */
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* Buttons in the certificate section */
-.certificate .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.certificate .buttons button {
-    background-color: var(--accent-color);
-    color: white;
-    border: 2px solid var(--primary-color);
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: var(--body-font);
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.certificate .buttons button:hover {
-    background-color: var(--secondary-color);
-}
-
-#courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.completed {
-    color: green;
-    font-weight: bold;
-}
-
-.not-completed {
-    color: red;
-    font-weight: normal;
-}
-
-h2 {
-    background-color: var(--primary-color); /* Sets the background color */
-    color: var(--background-color); /* Sets the text color */
-    margin: 0; /* Ensures no additional spacing at the top or bottom */
-    padding: 10px; /* Adds some space around the text */
-    width: 100%; /* Ensures it spans the width of its container */
-    box-sizing: border-box; /* Ensures padding is included in width */
-    text-align: center; /* Centers the text horizontally */
-}
-
-section:nth-of-type(2),
-section:nth-of-type(3) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the top-left */
-    justify-content: flex-start; /* Ensure content starts at the top */
-    padding: 20px;
-    min-height: 200px;
-}
-
-/* Hamburger Button Visibility (hidden by default on larger screens) */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    /* Make the navigation list stack vertically and be hidden by default */
-    nav ul {
-        display: none; /* Hide nav items by default */
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px; /* Adjust based on the header's height */
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        padding: 20px 0;
-    }
-
-    /* Display hamburger button */
-    .hamburger {
-        display: block;
-    }
-
-    /* When the nav is active, display the menu */
-    nav.active ul {
-        display: flex;
-    }
-
-    nav a {
-        padding: 10px 15px;
-        font-size: 1.2rem;
-    }
-
-    /* Stacking the sections on small screens */
-    body {
-        grid-template-columns: 1fr; /* Make all sections stack */
-    }
-
-    section:nth-of-type(n+2) {
-        grid-column: span 1; /* Ensure sections only span one column */
-    }
-}
-
-
-/* Footer styles */
-footer {
-    grid-column: span 3; /* Footer spans all columns */
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-/* General reset for elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body layout */
-body {
-    font-family: var(--body-font), sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    padding: 20px;
-    display: grid;
-    grid-template-rows: auto auto; /* Header and nav stacked */
-    grid-template-columns: repeat(3, 1fr); /* Grid layout for other sections */
-    gap: 20px;
-}
-
-/* Header styles */
-header {
-    grid-column: span 3; /* Spans all columns */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-header img {
-    max-width: 100px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Navigation section */
-section:nth-of-type(1) {
-    grid-column: span 3; /* Spans all columns */
-    background-color: var(--primary-color);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--accent-color);
-}
-
-nav a.current {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-/* Main sections with grid */
-section:nth-of-type(n+2) {
-    border: 2px solid var(--secondary-color);
-    border-radius: 8px;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Course Work and Helsinki sections */
-section:nth-of-type(2) {
-    grid-column: span 2; /* Spans the first two columns */
-}
-
-section:nth-of-type(3) {
-    grid-column: 3 / 4; /* Occupies the third column */
-}
-
-/* Certificate section spans all columns */
-.certificate {
-    grid-column: span 3; /* Spans all three columns */
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* Buttons in the certificate section */
-.certificate .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.certificate .buttons button {
-    background-color: var(--accent-color);
-    color: white;
-    border: 2px solid var(--primary-color);
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: var(--body-font);
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.certificate .buttons button:hover {
-    background-color: var(--secondary-color);
-}
-
-#courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.completed {
-    color: green;
-    font-weight: bold;
-}
-
-.not-completed {
-    color: red;
-    font-weight: normal;
-}
-
-h2 {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    margin: 0;
-    padding: 10px;
+/* Base Styles for Navigation */
+nav {
+    position: relative;
     width: 100%;
-    box-sizing: border-box;
-    text-align: center;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Hamburger Button Visibility (hidden by default on larger screens) */
-.hamburger {
-    display: none;
-    font-size: 30px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+/* When nav is active, the menu will be shown */
+nav.active ul {
+    display: flex; /* Show menu when 'active' class is added */
+}
+
+/* Individual Links */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+#hamburger {
+    display: block; /* Ensure the hamburger is visible */
+    font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    /* Make the navigation list stack vertically and be hidden by default */
+/* Main Content Layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px;
+}
+
+/* Sections for Course Work and Helsinki */
+section:nth-of-type(2), /* Course Work */
+section:nth-of-type(3) { /* Helsinki */
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add border for Course Work */
+section:nth-of-type(1) { /* Course Work */
+    border: 2px solid var(--secondary-color); /* Add border */
+    border-radius: 8px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Certificate Section Full Width */
+.certificate {
+    width: 100%; /* Set default width to 100% */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.certificate .buttons button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.certificate .buttons button:hover {
+    background-color: var(--secondary-color);
+}
+
+.completed {
+    background-color: #4CAF50; /* Green for completed courses */
+    color: white;
+}
+
+.not-completed {
+    background-color: #f44336; /* Red for not completed courses */
+    color: white;
+}
+
+
+#courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* Responsive Grid Layout */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+
+    section:nth-of-type(2), /* Course Work */
+    section:nth-of-type(3) { /* Helsinki */
+        grid-column: auto; /* Allow sections to sit side-by-side */
+    }
+
+    
+    .certificate {
+        width: 200%; /* Set width to 200% on larger screens */
+        grid-column: span 2; /* Full width for certificate section on larger screens */
+    }
+    
+
+    #hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+    /* Hide the navigation menu by default */
     nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        padding: 20px 0;
+        display: none; /* Hide navigation links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Ensure they take up full width */
     }
 
-    /* Display hamburger button */
-    .hamburger {
-        display: block;
-    }
-
-    /* When the nav is active, display the menu */
+    /* Show the menu when the 'active' class is added to nav */
     nav.active ul {
-        display: flex;
+        display: flex; /* Show the navigation items when active */
     }
 
-    nav a {
-        padding: 10px 15px;
-        font-size: 1.2rem;
+    #hamburger {
+        display: block; /* Show hamburger on small screens */
     }
 
-    /* Make all sections stack vertically */
-    body {
-        grid-template-columns: 1fr; /* Stack sections in a single column */
-    }
+    /* Hide the hamburger icon on larger screens */
+    @media (min-width: 768px) {
+        #hamburger {
+            display: none; /* Hide hamburger on larger screens */
+        }
 
-    section:nth-of-type(n+2) {
-        grid-column: span 1; /* Ensure sections only span one column */
-    }
-
-    /* Adjust course section layout */
-    #courses {
-        grid-template-columns: 1fr; /* Make course list stack vertically on small screens */
+        nav ul {
+            display: flex; /* Show nav items on larger screens */
+            flex-direction: row; /* Align horizontally */
+        }
     }
 }
 
-/* Footer styles */
 footer {
-    grid-column: span 3; /* Footer spans all columns */
     text-align: center;
     margin-top: 20px;
     font-size: 0.9rem;
