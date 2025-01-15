@@ -1,0 +1,30 @@
+[
+    {
+        "familyName": "Johnson",
+        "moveInDate": "2025-01-01",
+        "numberOfPeople": 4,
+        "visitedByBishopric": false,
+        "familyMembers": [
+            {
+                "name": "Mark",
+                "gender": "Male",
+                "birthdate": "1996-10-28"
+            },
+            {
+                "name": "Maria",
+                "gender": "Female",
+                "birthdate": "1998-05-18"
+            },
+            {
+                "name": "Matthew",
+                "gender": "Male",
+                "birthdate": "2020-09-05"
+            },
+            {
+                "name": "Mary",
+                "gender": "Female",
+                "birthdate": "2023-06-30"
+            }
+        ]
+    }
+]
