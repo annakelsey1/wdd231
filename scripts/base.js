@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("current-year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = "Last updated: " + new Date(document.lastModified).toLocaleString();
+  document.getElementById("lastModified").textContent = `Last updated: ${new Date(document.lastModified).toLocaleString()}`;
 });
 
 const courses = [
@@ -15,7 +15,7 @@ const courses = [
 function displayCourses(courseList) {
   const coursesContainer = document.getElementById("courses");
   coursesContainer.innerHTML = "";
-  courseList.forEach((course) => {
+  courseList.forEach(course => {
       const courseDiv = document.createElement("div");
       courseDiv.textContent = course.name;
       courseDiv.className = course.completed ? "completed" : "not-completed";
@@ -24,21 +24,19 @@ function displayCourses(courseList) {
 }
 
 function filterCourses(type) {
-  let filteredCourses = courses;
-  if (type !== "all") {
-      filteredCourses = courses.filter((course) => course.type === type);
-  }
+  const filteredCourses = type === 'all' ? courses : courses.filter(course => course.type === type);
   displayCourses(filteredCourses);
 }
 
 displayCourses(courses);
 
-// Hamburger Menu Toggle
 const hamburgerButton = document.getElementById("hamburger");
-const navList = document.querySelector("ul.nav-list");
+const navList = document.querySelector("nav ul.nav-list");
 
 hamburgerButton.addEventListener("click", () => {
-  navList.classList.toggle("active");
+  document.querySelector("nav").classList.toggle("active");
   hamburgerButton.classList.toggle("active");
 });
+
+
 
