@@ -1,9 +1,8 @@
 :root {
     --primary-color: #606c38;
     --secondary-color: #283618;
-    --accent-color: #dda15e;
     --background-color: #F5F5F5;
-    --text-color: #bc6c25;
+    --text-color: #9d602a;
     --header-font: 'Host Grotesk', sans-serif;
     --body-font: 'Host Grotesk', sans-serif;
 }
