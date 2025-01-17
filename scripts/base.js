@@ -34,6 +34,11 @@ function filterCourses(type) {
 displayCourses(courses);
 
 // Hamburger Menu Toggle
-document.querySelector('#hamburger').addEventListener('click', function() {
-  document.querySelector('nav').classList.toggle('active'); // Ensure the active class is being toggled
+const hamburgerButton = document.getElementById("hamburger");
+const navList = document.querySelector("ul.nav-list");
+
+hamburgerButton.addEventListener("click", () => {
+  navList.classList.toggle("active");
+  hamburgerButton.classList.toggle("active");
 });
+

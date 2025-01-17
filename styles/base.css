@@ -15,8 +15,8 @@ body {
     line-height: 1.6;
     margin: 0;
     display: grid;
-    grid-template-rows: auto auto; /* Flexible rows for header and content */
-    grid-template-columns: 1fr; /* Single column by default */
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    grid-column: 1; /* Header spans one column by default */
+    grid-column: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,6 @@ header img {
     border-radius: 50%;
 }
 
-/* Base Styles for Navigation */
 nav {
     position: relative;
     width: 100%;
@@ -56,7 +55,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
@@ -64,12 +63,12 @@ nav ul {
     margin: 0;
 }
 
-/* When nav is active, the menu will be shown */
 nav.active ul {
-    display: flex; /* Show menu when 'active' class is added */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-/* Individual Links */
 nav a {
     text-decoration: none;
     color: white;
@@ -85,24 +84,44 @@ nav a:hover {
 }
 
 #hamburger {
-    display: block; /* Ensure the hamburger is visible */
+    display: block;
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    text-align: center;
 }
 
-/* Main Content Layout */
+#hamburger:focus {
+    outline: none;
+}
+
+#hamburger.active::before {
+    content: "❎";
+}
+
+.nav-list li {
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-list li a:hover {
+    background-color: var(--accent-color);
+}
+
+nav.active .nav-list {
+    display: flex;
+}
+
 main {
     display: grid;
-    grid-template-columns: 1fr; /* Single column by default */
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* Sections for Course Work and Helsinki */
-section:nth-of-type(2), /* Course Work */
-section:nth-of-type(3) { /* Helsinki */
+section:nth-of-type(2),
+section:nth-of-type(3) {
     border: 2px solid var(--secondary-color);
     border-radius: 8px;
     background-color: white;
@@ -110,18 +129,16 @@ section:nth-of-type(3) { /* Helsinki */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Add border for Course Work */
-section:nth-of-type(1) { /* Course Work */
-    border: 2px solid var(--secondary-color); /* Add border */
+section:nth-of-type(1) {
+    border: 2px solid var(--secondary-color);
     border-radius: 8px;
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Certificate Section Full Width */
 .certificate {
-    width: 100%; /* Set default width to 100% */
+    width: 100%;
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 20px;
@@ -156,12 +173,12 @@ section:nth-of-type(1) { /* Course Work */
 }
 
 .completed {
-    background-color: #4CAF50; /* Green for completed courses */
+    background-color: #4CAF50;
     color: white;
 }
 
 .not-completed {
-    background-color: #f44336; /* Red for not completed courses */
+    background-color: #f44336;
     color: white;
 }
 
@@ -172,52 +189,43 @@ section:nth-of-type(1) { /* Course Work */
     gap: 10px;
 }
 
-/* Responsive Grid Layout */
 @media (min-width: 768px) {
     main {
-        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+        grid-template-columns: 1fr 1fr;
     }
 
-    section:nth-of-type(2), /* Course Work */
-    section:nth-of-type(3) { /* Helsinki */
-        grid-column: auto; /* Allow sections to sit side-by-side */
+    section:nth-of-type(2),
+    section:nth-of-type(3) {
+        grid-column: auto;
     }
 
     
     .certificate {
-        width: 200%; /* Set width to 200% on larger screens */
-        grid-column: span 2; /* Full width for certificate section on larger screens */
+        width: 200%;
+        grid-column: span 2;
     }
     
 
-    #hamburger {
-        display: none; /* Hide hamburger on larger screens */
-    }
-    /* Hide the navigation menu by default */
-    nav ul {
-        display: none; /* Hide navigation links by default on small screens */
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Ensure they take up full width */
-    }
-
-    /* Show the menu when the 'active' class is added to nav */
-    nav.active ul {
-        display: flex; /* Show the navigation items when active */
-    }
-
-    #hamburger {
-        display: block; /* Show hamburger on small screens */
-    }
-
-    /* Hide the hamburger icon on larger screens */
     @media (min-width: 768px) {
         #hamburger {
-            display: none; /* Hide hamburger on larger screens */
+            display: none;
         }
-
-        nav ul {
-            display: flex; /* Show nav items on larger screens */
-            flex-direction: row; /* Align horizontally */
+    
+        .nav-list {
+            display: flex;
+            flex-direction: row;
+            position: static;
+            background-color: transparent;
+            border: none;
+        }
+    
+        .nav-list li {
+            border: none;
+        }
+    
+        .nav-list li a {
+            color: white;
+            padding: 0 15px;
         }
     }
 }
