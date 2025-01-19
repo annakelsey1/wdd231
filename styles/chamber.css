@@ -67,13 +67,8 @@ nav ul {
 }
 
 .nav-list.open {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--primary-color);
-    width: 100%;
-    padding: 10px 0;
+    max-height: 500px;
+    opacity: 1;
 }
 
 nav a {
@@ -92,17 +87,22 @@ nav a:hover {
 
 .nav-list {
     list-style-type: none;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: auto;
     padding: 0;
     margin: 0;
     align-items: flex-start;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 #myButton.open::before {
     content: "x"
 }
+
 
 @media (min-width: 768px) {
     header {
@@ -118,6 +118,7 @@ nav a:hover {
         display: none;
     }
 
+
     nav ul {
         display: flex !important;
         flex-direction: row !important;
@@ -126,6 +127,8 @@ nav a:hover {
         width: auto !important;
         background-color: transparent !important;
         padding: 0 !important;
+        max-height: none !important;
+        opacity: 1 !important;
     }
 
     .nav-list.open{
