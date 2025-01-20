@@ -79,6 +79,11 @@ ul.menuLinks {
     color: white;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+}
+
 .member {
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -125,6 +130,7 @@ ul.menuLinks {
     text-decoration: underline;
     color: var(--text-color1);
 }
+
 
 .member img {
     max-width: 100px;
