@@ -1,0 +1,107 @@
+[
+    { 
+        "name": "Tech Innovators Inc.", 
+        "address": "123 Helsinki Way, Helsinki", 
+        "phone": "+358 (123) 456-7890", 
+        "website": "https://www.techinnovators.com", 
+        "image": "tech_innovators_logo.png", 
+        "membership_level": 3, 
+        "additional_info": { 
+            "CEO": "Jane Doe", 
+            "founded": 2005, 
+            "employees": 500, 
+            "industries": ["Technology", "Innovation", "Software"], 
+            "description": "Leading provider of innovative tech solutions and cloud computing." 
+        }
+    },
+    { 
+        "name": "Nokia", 
+        "address": "123 Espoo Way, Espoo", 
+        "phone": "+358 (123) 456-1234", 
+        "website": "https://www.nokia.com", 
+        "image": "nokia_logo.png", 
+        "membership_level": 2, 
+        "additional_info": { 
+            "CEO": "John Doe", 
+            "founded": 1987, 
+            "employees": 1000, 
+            "industries": ["Telecommunication", "Technology", "Mobile Phones"], 
+            "description": "A multinational telecommunications and technology company." 
+        }
+    },
+    { 
+        "name": "Kone", 
+        "address": "123 Porvoo Way, Porvoo", 
+        "phone": "+358 (845) 456-1234", 
+        "website": "https://www.kone.com", 
+        "image": "kone_logo.png", 
+        "membership_level": 1, 
+        "additional_info": { 
+            "CEO": "Joseph Hiddleston", 
+            "founded": 2015, 
+            "employees": 300, 
+            "industries": ["Elevators", "Escalators"], 
+            "description": "A global leader in the elevator and escalator industry, focusing on making urban life more vibrant and livable." 
+        }
+    },
+    { 
+        "name": "Neste", 
+        "address": "123  Oulu Way, Oulu", 
+        "phone": "+358 (845) 894-1234", 
+        "website": "https://www.neste.com", 
+        "image": "neste_logo.png", 
+        "membership_level": 1, 
+        "additional_info": { 
+            "CEO": "Frankland Soukko", 
+            "founded": 2013, 
+            "employees": 1500, 
+            "industries": ["Renewable Energy", "Oil Refining"], 
+            "description": "The world's leading producer of sustainable fules and renewable feedstock solution." 
+        }
+    },
+    { 
+        "name": "UPM-Kyemmene", 
+        "address": "123  Turku Way, Turku", 
+        "phone": "+358 (845) 987-1234", 
+        "website": "https://www.upmkyemmene.com", 
+        "image": "upmkyemmene_logo.png", 
+        "membership_level": 1, 
+        "additional_info": { 
+            "CEO": "Andrea Tipton", 
+            "founded": 1995, 
+            "employees": 2000, 
+            "industries": ["Bio Products", "Forest Industry Products"], 
+            "description": "A forest industry company producing renewable and recyclable products from wood and other raw materials." 
+        }
+    },
+    { 
+        "name": "Finnair", 
+        "address": "123  Tampere Way, Tampere", 
+        "phone": "+358 (845) 987-5563", 
+        "website": "https://www.tampere.com", 
+        "image": "tampere_logo.png", 
+        "membership_level": 1, 
+        "additional_info": { 
+            "CEO": "Mark Pierce", 
+            "founded": 1976, 
+            "employees": 600, 
+            "industries": ["Airlines", "Travel"], 
+            "description": "The largest airline in Finland, offering domestic and international flights." 
+        }
+    },
+    { 
+        "name": "Rovio Entertainment", 
+        "address": "123  Kuopio Way, Kuopio", 
+        "phone": "+358 (777) 987-5563", 
+        "website": "https://www.kuopio.com", 
+        "image": "kuopio_logo.png", 
+        "membership_level": 2, 
+        "additional_info": { 
+            "CEO": "Marco Polo", 
+            "founded": 2007, 
+            "employees": 700, 
+            "industries": ["Entertainment", "Mobile games", "Video games"], 
+            "description": "A video game developer and publisher best know for creating the Angry Birds game series." 
+        }
+    }
+]
