@@ -73,7 +73,21 @@ body {
     font-family: var(--body-font);
 }
 
+.footerNav img {
+    width: 30px;
+}
 
+.footerNav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(229, 229, 236);
+    gap: 3rem
+}
+
+footer {
+    background-color: rgb(229, 229, 236);
+    font-size: smaller;
+}
 
 @media (min-width: 38rem) {
     #myButton {
@@ -92,5 +106,11 @@ body {
     nav {
         grid-template-rows: 1fr;
     }
-}
 
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+}
