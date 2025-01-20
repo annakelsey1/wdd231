@@ -74,6 +74,79 @@ ul.menuLinks {
     content: "x";
 }
 
+.menu button.active {
+    background-color: var(--background-color1);
+    color: white;
+}
+
+.member {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.grid .member {
+    text-align: center;
+    background-color: var(--background-color3);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list .member {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+.list .member:nth-child(odd) {
+    background-color: var(--background-color2);
+}
+.list .member:nth-child(even) {
+    background-color: var(--background-color3);
+}
+
+.member a {
+    text-decoration: none;
+    color: var(--text-color2);
+}
+
+.member a:hover {
+    text-decoration: underline;
+    color: var(--text-color1);
+}
+
+.member img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.list .member img {
+    height: 75px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.member h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.member p {
+    margin: 0.25rem 0;
+}
+
 body {
     font-family: var(--body-font);
 }
@@ -86,7 +159,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--background-color3);
-    gap: 3rem
+    gap: 3rem;
 }
 
 footer {
@@ -110,6 +183,18 @@ footer {
 
     nav {
         grid-template-rows: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid .member {
+        text-align: center;
+        background-color: var(--background-color3);
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
     footer {
