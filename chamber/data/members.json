@@ -1,17 +1,17 @@
 [
     { 
-        "name": "Tech Innovators Inc.", 
+        "name": "Stora Enso", 
         "address": "123 Helsinki Way, Helsinki", 
         "phone": "+358 (123) 456-7890", 
-        "website": "https://www.techinnovators.com", 
-        "image": "tech_innovators_logo.png", 
+        "website": "https://www.storaenso.com", 
+        "image": "data:image/png;base64,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", 
         "membership_level": 3, 
         "additional_info": { 
-            "CEO": "Jane Doe", 
-            "founded": 2005, 
-            "employees": 500, 
-            "industries": ["Technology", "Innovation", "Software"], 
-            "description": "Leading provider of innovative tech solutions and cloud computing." 
+            "CEO": "Hans Sohlström", 
+            "founded": 1998, 
+            "employees": 20000, 
+            "industries": ["Manufacturing", "Renewable Materials"], 
+            "description": "A leading provider of renewable solutions for the packaging, biomaterials, wooden constructions, and paper industries." 
         }
     },
     { 
@@ -19,12 +19,12 @@
         "address": "123 Espoo Way, Espoo", 
         "phone": "+358 (123) 456-1234", 
         "website": "https://www.nokia.com", 
-        "image": "nokia_logo.png", 
+        "image": "https://1000logos.net/wp-content/uploads/2017/03/Nokia-Logo.png", 
         "membership_level": 2, 
         "additional_info": { 
-            "CEO": "John Doe", 
-            "founded": 1987, 
-            "employees": 1000, 
+            "CEO": "Pekka Lundmark", 
+            "founded": 1865, 
+            "employees": 86700, 
             "industries": ["Telecommunication", "Technology", "Mobile Phones"], 
             "description": "A multinational telecommunications and technology company." 
         }
@@ -33,13 +33,13 @@
         "name": "Kone", 
         "address": "123 Porvoo Way, Porvoo", 
         "phone": "+358 (845) 456-1234", 
-        "website": "https://www.kone.com", 
-        "image": "kone_logo.png", 
+        "website": "https://www.kone.com/en/", 
+        "image": "https://s7g10.scene7.com/is/image/kone/KONE_Primary_RGB_with-white-space:1920x705%28hero%29?Kone_alt_text=KONE%20logo", 
         "membership_level": 1, 
         "additional_info": { 
-            "CEO": "Joseph Hiddleston", 
-            "founded": 2015, 
-            "employees": 300, 
+            "CEO": "Philippe Delorme", 
+            "founded": 1910, 
+            "employees": 60000, 
             "industries": ["Elevators", "Escalators"], 
             "description": "A global leader in the elevator and escalator industry, focusing on making urban life more vibrant and livable." 
         }
@@ -49,12 +49,12 @@
         "address": "123  Oulu Way, Oulu", 
         "phone": "+358 (845) 894-1234", 
         "website": "https://www.neste.com", 
-        "image": "neste_logo.png", 
+        "image": "https://1000logos.net/wp-content/uploads/2022/07/Neste-Oil-logo.png", 
         "membership_level": 1, 
         "additional_info": { 
-            "CEO": "Frankland Soukko", 
-            "founded": 2013, 
-            "employees": 1500, 
+            "CEO": "Heikki Malinen", 
+            "founded": 1948, 
+            "employees": 6014, 
             "industries": ["Renewable Energy", "Oil Refining"], 
             "description": "The world's leading producer of sustainable fules and renewable feedstock solution." 
         }
@@ -63,13 +63,13 @@
         "name": "UPM-Kyemmene", 
         "address": "123  Turku Way, Turku", 
         "phone": "+358 (845) 987-1234", 
-        "website": "https://www.upmkyemmene.com", 
-        "image": "upmkyemmene_logo.png", 
+        "website": "https://www.upm.com", 
+        "image": "https://s3-symbol-logo.tradingview.com/upm-kymmene--big.svg", 
         "membership_level": 1, 
         "additional_info": { 
-            "CEO": "Andrea Tipton", 
-            "founded": 1995, 
-            "employees": 2000, 
+            "CEO": "Massimo Reynaudo", 
+            "founded": 1996, 
+            "employees": 16600, 
             "industries": ["Bio Products", "Forest Industry Products"], 
             "description": "A forest industry company producing renewable and recyclable products from wood and other raw materials." 
         }
@@ -78,13 +78,13 @@
         "name": "Finnair", 
         "address": "123  Tampere Way, Tampere", 
         "phone": "+358 (845) 987-5563", 
-        "website": "https://www.tampere.com", 
-        "image": "tampere_logo.png", 
+        "website": "https://www.finnair.com", 
+        "image": "https://brand.finnair.com/resource/image/2281016/landscape_ratio1050x590/1050/590/690322516e4f3826626199ff603f7328/6284236157F08CFA2DDC75E745F4A4CF/finnair-logo.png", 
         "membership_level": 1, 
         "additional_info": { 
-            "CEO": "Mark Pierce", 
-            "founded": 1976, 
-            "employees": 600, 
+            "CEO": "Turkka Kuusisto", 
+            "founded": 1923, 
+            "employees": 5200, 
             "industries": ["Airlines", "Travel"], 
             "description": "The largest airline in Finland, offering domestic and international flights." 
         }
@@ -93,13 +93,13 @@
         "name": "Rovio Entertainment", 
         "address": "123  Kuopio Way, Kuopio", 
         "phone": "+358 (777) 987-5563", 
-        "website": "https://www.kuopio.com", 
-        "image": "kuopio_logo.png", 
+        "website": "https://www.rovio.com", 
+        "image": "data:image/png;base64,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", 
         "membership_level": 2, 
         "additional_info": { 
-            "CEO": "Marco Polo", 
-            "founded": 2007, 
-            "employees": 700, 
+            "CEO": "Alexandre Pelletier-Normand", 
+            "founded": 2003, 
+            "employees": 500, 
             "industries": ["Entertainment", "Mobile games", "Video games"], 
             "description": "A video game developer and publisher best know for creating the Angry Birds game series." 
         }
