@@ -1,0 +1,121 @@
+:root {
+    --header-font: 'Host Grotesk', sans-serif;
+    --body-font: 'Host Grotesk', sans-serif;
+    --background-color1: rgb(4, 4, 99);
+    --background-color2: rgb(186, 231, 231);
+    --background-color3: rgb(229, 229, 236);
+    --text-color1: white;
+    --text-color2: black;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 70px auto 44px;
+    align-items: end;
+    padding: 1rem;
+    background-color: var(--background-color2);
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 1.1rem;
+}
+
+.title p {
+    font-size: .75rem;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: var(--background-color1);
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-color2);
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--text-color1);
+    text-decoration: none;
+}
+
+li.current-mentu-item a {
+    background-color: var(--text-color2);
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+#myButton.open::before {
+    content: "x";
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+.footerNav img {
+    width: 30px;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color3);
+    gap: 3rem;
+}
+
+footer {
+    background-color: var(--background-color3);
+    font-size: smaller;
+}
+
+@media (min-width: 38rem) {
+    #myButton {
+        display: none;
+    }
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+    
+    ul.menuLinks a:hover {
+        background-color: rgba(202, 184, 184, 0.2);
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+}
