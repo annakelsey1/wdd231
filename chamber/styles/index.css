@@ -1,11 +1,13 @@
 :root {
     --header-font: 'Host Grotesk', sans-serif;
     --body-font: 'Host Grotesk', sans-serif;
-    --background-color1: rgb(4, 4, 99);
+    --background-color1: rgb(0, 0, 143);
     --background-color2: rgb(186, 231, 231);
     --background-color3: rgb(229, 229, 236);
     --text-color1: white;
     --text-color2: black;
+    --primary-accent: rgb(0, 123, 255);
+    --secondary-accent: rgba(0, 123, 255, 0.1);
 }
 
 header {
@@ -74,17 +76,6 @@ ul.menuLinks {
     content: "x";
 }
 
-:root {
-    --header-font: 'Host Grotesk', sans-serif;
-    --body-font: 'Host Grotesk', sans-serif;
-    --background-color1: rgb(4, 4, 99);
-    --background-color2: rgb(186, 231, 231);
-    --background-color3: rgb(229, 229, 236);
-    --text-color1: white;
-    --text-color2: black;
-    --primary-accent: rgb(0, 123, 255);
-    --secondary-accent: rgba(0, 123, 255, 0.1);
-}
 
 body {
     font-family: var(--body-font);
@@ -123,45 +114,6 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     z-index: 10;
-}
-
-#myButton::before {
-    content: "\2630";
-}
-
-#myButton.open::before {
-    content: "✖";
-}
-
-nav {
-    display: grid;
-    grid-template-rows: 0fr;
-    background-color: var(--background-color1);
-    overflow: hidden;
-    transition: grid-template-rows 0.3s ease-in-out;
-}
-
-nav.open {
-    grid-template-rows: 1fr;
-}
-
-ul.menuLinks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul.menuLinks li {
-    margin: 0;
-}
-
-ul.menuLinks li a {
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--text-color1);
-    background-color: var(--background-color1);
-    transition: background-color 0.3s ease;
 }
 
 ul.menuLinks li a:hover {

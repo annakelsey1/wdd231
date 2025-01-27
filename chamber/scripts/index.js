@@ -9,6 +9,7 @@ const navElement = document.querySelector('#animateMe');
 hamburgerElement.addEventListener('click', () => {
     navElement.classList.toggle('open');
     hamburgerElement.classList.toggle('open');
+    hamburgerElement.setAttribute('aria-label', isOpen ? "Close menu" : "Open menu");
 });
 
 const gridButton = document.querySelector("#grid");
