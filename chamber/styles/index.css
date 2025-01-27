@@ -212,6 +212,36 @@ footer {
     font-size: smaller;
 }
 
+a.cta-link {
+    display: inline-block;
+    background-color: var(--background-color1);
+    color: var(--text-color1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.cta-link:hover {
+    background-color: var(--primary-accent);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+a.cta-link:focus {
+    outline: none;
+    border: 2px solid var(--primary-accent);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+a.cta-link:active {
+    transform: scale(0.98);
+}
+
+
 @media (min-width: 38rem) {
     #myButton {
         display: none;
@@ -230,30 +260,28 @@ footer {
     .hero-image {
         content: url('../images/hero.jpg');
         height: 500px;
-        margin-bottom: 2rem; /* Add some space between image and the next section */
+        margin-bottom: 2rem;
     }
 
     main {
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Create two columns */
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
         padding: 2rem;
-        grid-template-rows: auto; /* Ensure sections within main are auto-sized */
+        grid-template-rows: auto;
     }
 
-    /* Stack the hero image and current events on top of each other */
     .hero-image,
     .current-events {
-        grid-column: span 2; /* Make these sections span both columns */
+        grid-column: span 2;
     }
 
     .current-events {
-        margin-top: 1rem; /* Add space between the image and current events */
+        margin-top: 1rem;
     }
 
-    /* Keep Monthly Spotlights and Weather side by side */
     .monthly-spotlights,
     .weather {
         display: flex;
@@ -270,12 +298,14 @@ footer {
     }
 
     main div h2, main div h3 {
-        font-size: 1.2rem; /* Make headings larger */
+        font-size: 1.2rem;
     }
 
     main div p {
-        font-size: 1rem; /* Adjust paragraph text size for readability */
+        font-size: 1rem;
     }
+
+    
 
     .footerNav {
         display: flex;
