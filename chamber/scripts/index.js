@@ -13,8 +13,8 @@ hamburgerElement.addEventListener('click', () => {
 });
 
 const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
+const weatherIcon = document.createElement('img');
+const captionDesc = document.querySelector('#current-description');
 const currentDescription = document.querySelector('#current-description');
 const forecastContainer = document.querySelector('#forecast');
 
@@ -49,7 +49,7 @@ async function getWeather() {
     const iconSrc = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', iconSrc);
     weatherIcon.setAttribute('alt', weatherData.weather[0].description);
-    captionDesc.textContent = weatherData.weather[0].description;
+    currentTemp.insertAdjacentElement('afterend', weatherIcon);
 
     displayForecast(forecastData);
 }
