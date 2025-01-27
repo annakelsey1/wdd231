@@ -230,11 +230,58 @@ footer {
     .hero-image {
         content: url('../images/hero.jpg');
         height: 500px;
+        margin-bottom: 2rem; /* Add some space between image and the next section */
     }
 
     main {
         max-width: 1200px;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Create two columns */
+        gap: 2rem;
+        padding: 2rem;
+        grid-template-rows: auto; /* Ensure sections within main are auto-sized */
+    }
+
+    /* Stack the hero image and current events on top of each other */
+    .hero-image,
+    .current-events {
+        grid-column: span 2; /* Make these sections span both columns */
+    }
+
+    .current-events {
+        margin-top: 1rem; /* Add space between the image and current events */
+    }
+
+    /* Keep Monthly Spotlights and Weather side by side */
+    .monthly-spotlights,
+    .weather {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    main div:not(.hero-image) {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        background-color: white;
+    }
+
+    main div h2, main div h3 {
+        font-size: 1.2rem; /* Make headings larger */
+    }
+
+    main div p {
+        font-size: 1rem; /* Adjust paragraph text size for readability */
+    }
+
+    .footerNav {
+        display: flex;
+        justify-content: center;
+        background-color: var(--background-color3);
+        gap: 3rem;
     }
 
     footer {
