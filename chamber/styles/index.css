@@ -213,7 +213,8 @@ footer {
 }
 
 a.cta-link {
-    display: inline-block;
+    grid-column: span 2;
+    justify-self: center;
     background-color: var(--background-color1);
     color: var(--text-color1);
     font-size: 1.2rem;
