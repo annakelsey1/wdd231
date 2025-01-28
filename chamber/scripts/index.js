@@ -12,6 +12,43 @@ hamburgerElement.addEventListener('click', () => {
     hamburgerElement.setAttribute('aria-label', isOpen ? "Close menu" : "Open menu");
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const spotlightsContainer = document.querySelector('#monthly-spotlights');
+    const jsonUrl = './data/members.json';
+
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Fetched JSON data:', data);
+            const filteredCompanies = data.filter(company =>
+                company.name === "Nokia" || company.name === "Kone"
+            );
+            filteredCompanies.forEach(company => {
+                const companyElement = document.createElement('div');
+                companyElement.innerHTML = `
+                    <img src="${company.image}" alt="${company.name} Logo" style="width:100px;height:auto;">
+                    <h4>${company.name}</h4>
+                    <p>${company.additional_info.description}</p>
+                    <p><strong>Founded:</strong> ${company.additional_info.founded}</p>
+                    <p><strong>Industries:</strong> ${company.additional_info.industries.join(', ')}</p>
+                `;
+                spotlightsContainer.appendChild(companyElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching the JSON data:', error);
+            spotlightsContainer.innerHTML = '<p>Unable to load monthly spotlights at this time. Please try again later.</p>';
+        });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.createElement('img');
 const captionDesc = document.querySelector('#current-description');
