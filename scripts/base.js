@@ -17,8 +17,14 @@ function displayCourses(courseList) {
   coursesContainer.innerHTML = "";
   courseList.forEach(course => {
       const courseDiv = document.createElement("div");
-      courseDiv.textContent = course.name;
       courseDiv.className = course.completed ? "completed" : "not-completed";
+      
+      const button = document.createElement("button");
+      button.textContent = course.name;
+      button.classList.add("course-button");
+      button.addEventListener("click", () => displayCourseDetails(course));
+      
+      courseDiv.appendChild(button);
       coursesContainer.appendChild(courseDiv);
   });
 }
@@ -38,5 +44,26 @@ hamburgerButton.addEventListener("click", () => {
   hamburgerButton.classList.toggle("active");
 });
 
+const dialog = document.getElementById("course-details");
+const closeButton = document.getElementById("close-modal");
+const modalContent = document.getElementById("modal-content");
 
+function displayCourseDetails(course) {
+  modalContent.innerHTML = `
+    <h2>${course.name}</h2>
+    <p><strong>Type:</strong> ${course.type}</p>
+    <p><strong>Completed:</strong> ${course.completed ? "Yes" : "No"}</p>
+  `;
 
+  dialog.showModal();
+}
+
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) {
+    dialog.close();
+  }
+});

@@ -110,6 +110,29 @@ nav a:hover {
     background-color: var(--accent-color);
 }
 
+dialog {
+    border:1px solid #9d602a;
+    background-color: #283618;
+    color: #F5F5F5;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+}
+
+dialog ::backdrop {
+    background: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
 @media (min-width: 768px) {
     #hamburger {
         display: none;
