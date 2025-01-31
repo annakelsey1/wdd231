@@ -42,16 +42,19 @@
 
     <main>
         <label for="firstName">First Name:</label>
-        <input name="firstName" id="firstName" type="text" autocomplete="given-name"/>
+        <input name="firstName" id="firstName" type="text" autocomplete="given-name" required/>
 
         <label for="lastName">Last Name:</label>
-        <input name="lastName" id="lastName" type="text" autocomplete="family-name"/>
+        <input name="lastName" id="lastName" type="text" autocomplete="family-name" required/>
 
         <label for="title">Organizational Title:</label>
         <input name="title" id="title" type="text" autocomplete="organization-title"
             pattern="[A-Za-z\s\-]{7,}"
             title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
             required/>
+
+        <label for="email">Email Address:</label>
+        <input name="email" id="email" type="email" autocomplete="email" placeholder="example@email.com" required/>
     </main>
     <script src="scripts/index.js"></script>
     <footer>
