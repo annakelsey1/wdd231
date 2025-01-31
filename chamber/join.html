@@ -60,6 +60,18 @@
         <label for="telephone">Mobile Phone Number:</label>
         <input name="telephone" id="telephone" type="tel" autocomplete="tel" required/>
 
+        <label for="organization">Business/Organization Name:</label>
+        <input name="organization" id="organization" type="text" autocomplete="organization" required/>
+
+        <label for="membership">Membership Level:</label>
+        <select name="membership" id="membership" required>
+            <option value="" disabled selected>Select a membership level</option>
+            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+
         <button type="submit">Submit</button>
         </form>
         
