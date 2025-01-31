@@ -72,6 +72,14 @@
             <option value="gold">Gold Membership</option>
         </select>
 
+        <label for="organizationDesc">Business/Organization Description:</label>
+        <textarea name="organizationDesc" id="organizationDesc" title="Describe your business/organization" required></textarea>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+        <script>
+            document.getElementById("timestamp").value = new Date().toISOString();
+        </script>
+
         <button type="submit">Submit</button>
         </form>
         
