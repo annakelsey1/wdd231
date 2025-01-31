@@ -46,6 +46,12 @@
 
         <label for="lastName">Last Name:</label>
         <input name="lastName" id="lastName" type="text" autocomplete="family-name"/>
+
+        <label for="title">Organizational Title:</label>
+        <input name="title" id="title" type="text" autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}"
+            title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
+            required/>
     </main>
     <script src="scripts/index.js"></script>
     <footer>
