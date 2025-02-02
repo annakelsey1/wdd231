@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,55 +41,44 @@
     </nav>
 
     <main>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Test</title>
-</head>
-<body>
-    <form method="GET" action="thankyou.html">
-        <label for="firstName">First Name:</label>
-        <input name="firstName" id="firstName" type="text" autocomplete="given-name" required>
+        <form method="GET" action="thankyou.html">
+            <label for="firstName">First Name:</label>
+            <input name="firstName" id="firstName" type="text" autocomplete="given-name" required>
 
-        <label for="lastName">Last Name:</label>
-        <input name="lastName" id="lastName" type="text" autocomplete="family-name" required>
+            <label for="lastName">Last Name:</label>
+            <input name="lastName" id="lastName" type="text" autocomplete="family-name" required>
 
-        <label for="title">Organizational Title:</label>
-        <input name="title" id="title" type="text" autocomplete="organization-title"
-            pattern="[A-Za-z\s\-]{7,}"
-            title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
-            required>
+            <label for="title">Organizational Title:</label>
+            <input name="title" id="title" type="text" autocomplete="organization-title"
+                pattern="[A-Za-z\s\-]{7,}"
+                title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
+                required>
 
-        <label for="email">Email Address:</label>
-        <input name="email" id="email" type="email" autocomplete="email" placeholder="example@email.com" required>
+            <label for="email">Email Address:</label>
+            <input name="email" id="email" type="email" autocomplete="email" placeholder="example@email.com" required>
 
-        <label for="telephone">Mobile Phone Number:</label>
-        <input name="telephone" id="telephone" type="tel" autocomplete="tel" required>
+            <label for="telephone">Mobile Phone Number:</label>
+            <input name="telephone" id="telephone" type="tel" autocomplete="tel" required>
 
-        <label for="organization">Business/Organization Name:</label>
-        <input name="organization" id="organization" type="text" autocomplete="organization" required>
+            <label for="organization">Business/Organization Name:</label>
+            <input name="organization" id="organization" type="text" autocomplete="organization" required>
 
-        <label for="membership">Membership Level:</label>
-        <select name="membership" id="membership" required>
-            <option value="" disabled selected>Select a membership level</option>
-            <option value="np">NP Membership (Non-Profit - No Fee)</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-        </select>
+            <label for="membership">Membership Level:</label>
+            <select name="membership" id="membership" required>
+                <option value="" disabled selected>Select a membership level</option>
+                <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
 
-        <label for="organizationDesc">Business/Organization Description:</label>
-        <textarea name="organizationDesc" id="organizationDesc" title="Describe your business/organization" required></textarea>
+            <label for="organizationDesc">Business/Organization Description:</label>
+            <textarea name="organizationDesc" id="organizationDesc" title="Describe your business/organization" required></textarea>
 
-        <input type="hidden" name="timestamp" id="timestamp">
+            <input type="hidden" name="timestamp" id="timestamp">
 
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
-
+            <button type="submit">Submit</button>
+        </form>
 
         <div class="membershipLevels">
             <h2>Membership Levels</h2>
@@ -156,36 +145,31 @@
                 <p>✔ Featured business spotlight.</p>
             </div>
         </div>
-        
     </main>
+    
     <script src="scripts/index.js"></script>
-<footer>
-    <div>
-        <h4>Finland Chamber of Commerce</h4>
-        <p>Runeberginkatu 2</p>
-        <p>Helsinki, Finland 00100</p>
-        <p>info@finlandcc.org</p>
-        <p>+358 (800)555-4231</p>
-    </div>
-    <div>
-        <nav class="footerNav">
-            <a href="http://facebook.com">
-                <img src="images/facebook_logo.png" alt="Facebook Logo">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/x_logo.png" alt="X/Twitter Logo">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram_logo.png" alt="Instagram Logo">
-            </a>
-        </nav>
-    </div>
-    <div>
-        <p>WDD231 Class Project</p>
-        <p>Anna Kelsey</p>
-        <p>&copy; <span id="current-year"></span> Finland Chamber of Commerce</p>
-        <p id="lastModified"></p>
-    </div>
-</footer>
+    
+    <footer>
+        <div>
+            <h4>Finland Chamber of Commerce</h4>
+            <p>Runeberginkatu 2</p>
+            <p>Helsinki, Finland 00100</p>
+            <p>info@finlandcc.org</p>
+            <p>+358 (800)555-4231</p>
+        </div>
+        <div>
+            <nav class="footerNav">
+                <a href="http://facebook.com">
+                    <img src="images/facebook_logo.png" alt="Facebook Logo">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/x_logo.png" alt="X/Twitter Logo">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram_logo.png" alt="Instagram Logo">
+                </a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
