@@ -157,3 +157,20 @@ document.addEventListener("DOMContentLoaded", () => {
         timestampField.value = new Date().toISOString();
     }
 });
+
+//For the thankyou.html page
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param) || "N/A";
+}
+
+document.getElementById("firstName").textContent = getQueryParam('firstName');
+        document.getElementById("lastName").textContent = getQueryParam('lastName');
+        document.getElementById("title").textContent = getQueryParam('title');
+        document.getElementById("email").textContent = getQueryParam('email');
+        document.getElementById("telephone").textContent = getQueryParam('telephone');
+        document.getElementById("organization").textContent = getQueryParam('organization');
+        document.getElementById("membership").textContent = getQueryParam('membership');
+        document.getElementById("organizationDesc").textContent = getQueryParam('organizationDesc');
+
+        
