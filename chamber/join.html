@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Page for WDD231 assingments">
+    <meta name="description" content="Chamber of Commerce Page for WDD231 assignments">
     <meta name="author" content="Anna Kelsey">
     <title>Finland Chamber of Commerce | Join Page</title>
     <meta property="og:title" content="Join page for Anna Kelsey's WDD231 Class">
@@ -43,79 +43,138 @@
     <main>
         <form method="GET" action="thankyou.html">
             <label for="firstName">First Name:</label>
-        <input name="firstName" id="firstName" type="text" autocomplete="given-name" required/>
+            <input name="firstName" id="firstName" type="text" autocomplete="given-name" required/>
 
-        <label for="lastName">Last Name:</label>
-        <input name="lastName" id="lastName" type="text" autocomplete="family-name" required/>
+            <label for="lastName">Last Name:</label>
+            <input name="lastName" id="lastName" type="text" autocomplete="family-name" required/>
 
-        <label for="title">Organizational Title:</label>
-        <input name="title" id="title" type="text" autocomplete="organization-title"
-            pattern="[A-Za-z\s\-]{7,}"
-            title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
-            required/>
+            <label for="title">Organizational Title:</label>
+            <input name="title" id="title" type="text" autocomplete="organization-title"
+                pattern="[A-Za-z\s\-]{7,}"
+                title="Title must be at least 7 characters and can only include letters, hyphens, and spaces."
+                required/>
 
-        <label for="email">Email Address:</label>
-        <input name="email" id="email" type="email" autocomplete="email" placeholder="example@email.com" required/>
+            <label for="email">Email Address:</label>
+            <input name="email" id="email" type="email" autocomplete="email" placeholder="example@email.com" required/>
 
-        <label for="telephone">Mobile Phone Number:</label>
-        <input name="telephone" id="telephone" type="tel" autocomplete="tel" required/>
+            <label for="telephone">Mobile Phone Number:</label>
+            <input name="telephone" id="telephone" type="tel" autocomplete="tel" required/>
 
-        <label for="organization">Business/Organization Name:</label>
-        <input name="organization" id="organization" type="text" autocomplete="organization" required/>
+            <label for="organization">Business/Organization Name:</label>
+            <input name="organization" id="organization" type="text" autocomplete="organization" required/>
 
-        <label for="membership">Membership Level:</label>
-        <select name="membership" id="membership" required>
-            <option value="" disabled selected>Select a membership level</option>
-            <option value="np">NP Membership (Non-Profit - No Fee)</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-        </select>
+            <label for="membership">Membership Level:</label>
+            <select name="membership" id="membership" required>
+                <option value="" disabled selected>Select a membership level</option>
+                <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
 
-        <label for="organizationDesc">Business/Organization Description:</label>
-        <textarea name="organizationDesc" id="organizationDesc" title="Describe your business/organization" required></textarea>
+            <label for="organizationDesc">Business/Organization Description:</label>
+            <textarea name="organizationDesc" id="organizationDesc" title="Describe your business/organization" required></textarea>
 
-        <input type="hidden" name="timestamp" id="timestamp">
-        <script>
-            document.getElementById("timestamp").value = new Date().toISOString();
-        </script>
+            <input type="hidden" name="timestamp" id="timestamp">
 
-        <button type="submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
 
         <div class="membershipLevels">
             <h2>Membership Levels</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations. No fee required.</p>
+                    <button class="open-modal" data-modal="npModal">More Info</button>
+                </div>
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level membership with basic benefits.</p>
+                    <button class="open-modal" data-modal="bronzeModal">More Info</button>
+                </div>
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <p>Intermediate membership with additional perks.</p>
+                    <button class="open-modal" data-modal="silverModal">More Info</button>
+                </div>
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium membership with exclusive benefits.</p>
+                    <button class="open-modal" data-modal="goldModal">More Info</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="npModal">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <p>✔ Free membership for non-profit organizations.</p>
+                <p>✔ Access to networking events.</p>
+                <p>✔ Listing in the business directory.</p>
+            </div>
+        </div>
+        
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="bronzeModal">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <p>✔ All NP benefits.</p>
+                <p>✔ Business exposure through chamber newsletters.</p>
+                <p>✔ Discounted event fees.</p>
+            </div>
+        </div>
+        
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="silverModal">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <p>✔ All Bronze benefits.</p>
+                <p>✔ Priority placement in business directory.</p>
+                <p>✔ Exclusive networking opportunities.</p>
+            </div>
+        </div>
+        
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="goldModal">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <p>✔ All Silver benefits.</p>
+                <p>✔ Personalized chamber support.</p>
+                <p>✔ Featured business spotlight.</p>
+            </div>
         </div>
         
     </main>
     <script src="scripts/index.js"></script>
-    <footer>
-        <div>
-            <h4>Finland Chamber of Commerce</h4>
-            <p>Runeberginkatu 2</p>
-            <p>Helsinki, Finland 00100</p>
-            <p>info@finlandcc.org</p>
-            <p>+358 (800)555-4231</p>
-        </div>
-        <div>
-            <nav class="footerNav">
-                <a href="http://facebook.com">
-                    <img src="images/facebook_logo.png" alt="Facebook Logo">
-                </a>
-                <a href="https://twitter.com">
-                    <img src="images/x_logo.png" alt="X/Twitter Logo">
-                </a>
-                <a href="https://instagram.com">
-                    <img src="images/instagram_logo.png" alt="Instagram Logo">
-                </a>
-            </nav>
-        </div>
-        <div>
-            <p>WDD231 Class Project</p>
-            <p>Anna Kelsey</p>
-            <p>&copy; <span id="current-year"></span> Finland Chamber of Commerce</p>
-            <p id="lastModified"></p>
-        </div>
-    </footer>
 </body>
+<footer>
+    <div>
+        <h4>Finland Chamber of Commerce</h4>
+        <p>Runeberginkatu 2</p>
+        <p>Helsinki, Finland 00100</p>
+        <p>info@finlandcc.org</p>
+        <p>+358 (800)555-4231</p>
+    </div>
+    <div>
+        <nav class="footerNav">
+            <a href="http://facebook.com">
+                <img src="images/facebook_logo.png" alt="Facebook Logo">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/x_logo.png" alt="X/Twitter Logo">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram_logo.png" alt="Instagram Logo">
+            </a>
+        </nav>
+    </div>
+    <div>
+        <p>WDD231 Class Project</p>
+        <p>Anna Kelsey</p>
+        <p>&copy; <span id="current-year"></span> Finland Chamber of Commerce</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
 </html>

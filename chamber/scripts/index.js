@@ -115,3 +115,45 @@ function displayForecast(forecastData) {
 }
 
 getWeather();
+
+document.getElementById("timestamp").value = new Date().toISOString();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("myButton");
+    const navMenu = document.getElementById("animateMe");
+
+    menuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+
+    const openButtons = document.querySelectorAll(".open-modal");
+    const closeButtons = document.querySelectorAll(".close");
+    const modals = document.querySelectorAll(".modal");
+
+    openButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "block";
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", (event) => {
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+});
