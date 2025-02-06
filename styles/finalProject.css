@@ -2,10 +2,20 @@
     --header-font: 'Host Grotesk', sans-serif;
     --body-font: 'Host Grotesk', sans-serif;
     --background-color1: #eacfa9;
-    --background-color2: #f8861b;
+    --background-color2: #03078c;
     --background-color3: rgb(229, 229, 236);
     --text-color1: #0a0a0a;
     --text-color2: #fcf8f8;
+}
+
+header {
+    background-color: var(--background-color2);
+    color: var(--text-color2);
+}
+
+main {
+    background-color: var(--background-color1);
+    color: var(--text-color1);
 }
 
 footer {
