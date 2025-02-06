@@ -1,6 +1,6 @@
 :root {
-    --header-font: 'Host Grotesk', sans-serif;
-    --body-font: 'Host Grotesk', sans-serif;
+    --header-font: 'Poppins', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
     --background-color1: #eacfa9;
     --background-color2: #03078c;
     --background-color3: rgb(229, 229, 236);
@@ -30,7 +30,6 @@ footer {
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
-    background-color: var(--background-color3);
     align-items: center;
 }
 
