@@ -9,3 +9,28 @@
     --primary-accent: rgb(0, 123, 255);
     --secondary-accent: rgba(0, 123, 255, 0.1);
 }
+
+footer {
+    background-color: var(--background-color3);
+    padding: 1rem;
+    font-size: smaller;
+    text-align: center;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    background-color: var(--background-color3);
+    align-items: center;
+}
+
+.footerNav img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footerNav img:hover {
+    transform: scale(1.2);
+}
