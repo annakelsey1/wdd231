@@ -135,3 +135,7 @@ footer {
         text-align: left;
     }
 }
+
+@media (min-width: 64rem) {
+    /* Styles for large screens (e.g., desktops) */
+}
