@@ -87,6 +87,21 @@ li.current-menu-item a {
     color: var(--text-color2);
 }
 
+.button {
+    display: inline-block;
+    padding: 3px 5px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
 footer {
     background-color: var(--background-color3);
     padding: 1rem;
