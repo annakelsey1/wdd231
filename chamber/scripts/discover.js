@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("lastModified").textContent = `Last updated: ${new Date(document.lastModified).toLocaleString()}`;
 
     const mainElement = document.querySelector("main"); // Select the <main> element
+    mainElement.classList.add("places-container");
 
     places.forEach(place => {
         const placeDiv = document.createElement("div");
+        placeDiv.classList.add("place-card");
 
         // Create a heading for the place name
         const title = document.createElement("h2");
