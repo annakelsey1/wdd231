@@ -243,6 +243,15 @@ footer {
         width: 300px;
     }
 
+    .place-card img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
+    }
+
+    .place-card img:hover {
+        transform: scale(1.1); /* Zoom in the image */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect when hovered */
+    }
+
     footer {
         display: flex;
         justify-content: space-between;
@@ -262,6 +271,4 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
-    
 }
