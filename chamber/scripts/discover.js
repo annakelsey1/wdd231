@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("current-year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = `Last updated: ${new Date(document.lastModified).toLocaleString()}`;
 
+    const hamburgerElement = document.querySelector('#myButton');
+    const navElement = document.querySelector('#animateMe');
+
+hamburgerElement.addEventListener('click', () => {
+    navElement.classList.toggle('open');
+    hamburgerElement.classList.toggle('open');
+});
+
     const mainElement = document.querySelector("main"); // Select the <main> element
     mainElement.classList.add("places-container");
 
@@ -19,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const image = document.createElement("img");
         image.src = place.image;
         image.alt = place.alt;
+        image.loading = "lazy";
 
         // Create an address element
         const address = document.createElement("address");
