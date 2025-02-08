@@ -10,3 +10,6 @@ hamburgerElement.addEventListener('click', () => {
     navElement.classList.toggle('open');
     hamburgerElement.classList.toggle('open');
 });
+
+import { places } from "../data/discover.mjs";
+console.log(places);
