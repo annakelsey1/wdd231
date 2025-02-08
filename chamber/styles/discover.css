@@ -107,11 +107,12 @@ li.current-menu-item a {
 /* Container for all the places */
 .places-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr; /* Single column layout */
     gap: 1rem;
     padding: 1rem;
     justify-content: center;
 }
+
 
 /* Styles for each card */
 .place-card {
@@ -225,6 +226,10 @@ footer {
             "image description"
             "image address"
             ". button";
+    }
+
+    .place-card img {
+        width: 300px;
     }
 
     footer {
