@@ -44,3 +44,39 @@ document.addEventListener("DOMContentLoaded", () => {
         mainElement.appendChild(placeDiv);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebarMessage = document.getElementById("visit-message");
+
+    // Retrieve last visit from localStorage
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    // Get the current date in milliseconds
+    const currentDate = Date.now();
+
+    if (!lastVisit) {
+        // First visit case
+        sidebarMessage.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        // Convert last visit from string to a number
+        const lastVisitDate = Number(lastVisit);
+
+        // Calculate the difference in time (in milliseconds)
+        const timeDifference = currentDate - lastVisitDate;
+
+        // Convert milliseconds to days
+        const daysBetweenVisits = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysBetweenVisits < 1) {
+            sidebarMessage.textContent = "Back so soon! Awesome!";
+        } else if (daysBetweenVisits === 1) {
+            sidebarMessage.textContent = "You last visited 1 day ago.";
+        } else {
+            sidebarMessage.textContent = `You last visited ${daysBetweenVisits} days ago.`;
+        }
+    }
+
+    // Store the current visit date
+    localStorage.setItem("lastVisit", currentDate);
+});
