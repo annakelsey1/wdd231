@@ -242,5 +242,12 @@ footer {
 }
 
 @media (min-width: 64rem) {
-    /* Styles for large screens (e.g., desktops) */
+    h1 {
+        text-align: center;
+    }
+
+    .places-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
