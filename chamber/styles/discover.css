@@ -11,7 +11,8 @@
 }
 
 header {
-    display: flex; /* Changed to flex for consistency */
+    display: flex;
+    /* Changed to flex for consistency */
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
@@ -90,7 +91,8 @@ li.current-menu-item a {
 .button {
     display: inline-block;
     padding: 3px 5px;
-    background-color: #007bff; /* Blue */
+    background-color: #007bff;
+    /* Blue */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -105,7 +107,7 @@ li.current-menu-item a {
 /* Container for all the places */
 .places-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 1rem;
     justify-content: center;
@@ -114,7 +116,7 @@ li.current-menu-item a {
 /* Styles for each card */
 .place-card {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "title"
         "image"
         "description"
@@ -215,6 +217,14 @@ footer {
         display: flex;
         justify-content: flex-end;
         gap: 2rem;
+    }
+
+    .place-card {
+        grid-template-areas:
+            "image title"
+            "image description"
+            "image address"
+            ". button";
     }
 
     footer {
