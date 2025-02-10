@@ -15,6 +15,7 @@ header {
     padding: 1rem;
     background-color: var(--background-color2);
     font-family: var(--header-font);
+    color: var(--text-color2);
 }
 
 h1 {
@@ -87,6 +88,7 @@ footer {
     gap: 2rem;
     margin-top: 1rem;
     align-items: center;
+    background-color: var(--background-color3);
 }
 
 .footerNav img {
