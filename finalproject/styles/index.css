@@ -75,6 +75,11 @@ body {
     font-family: var(--body-font);
 }
 
+picture img {
+    width: 100vw;
+    height: auto;
+}
+
 footer {
     background-color: var(--background-color3);
     padding: 1rem;
@@ -113,6 +118,12 @@ footer {
         display: flex;
         justify-content: flex-end;
         gap: 2rem;
+    }
+
+    picture img {
+        content: url('../images/largerhero.webp');
+        width: 100vw;
+        height: auto;
     }
 
     .footerNav {
