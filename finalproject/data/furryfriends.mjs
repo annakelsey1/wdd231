@@ -4,7 +4,7 @@ export const pets = [
     "image": "images/luna.webp",
     "alt": "Image of Luna the cat",
     "age": "2 years",
-    "description": "A gentle tabby who loves cuddles and sunny windows.",
+    "description": "A gentle white who loves cuddles and sunny windows.",
     "link": "#"
   },
   {
