@@ -10,3 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburgerElement.setAttribute('aria-label', hamburgerElement.classList.contains('open') ? "Close menu" : "Open menu");
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("tipsModal");
+    const openModalButton = document.getElementById("openModal");
+    const closeModalButton = document.getElementById("closeModal");
+
+    openModalButton.addEventListener("click", () => {
+        modal.showModal();
+    });
+
+    closeModalButton.addEventListener("click", () => {
+        modal.close();
+    });
+});
