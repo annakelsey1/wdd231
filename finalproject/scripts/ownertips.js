@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburgerElement.classList.toggle('open');
         hamburgerElement.setAttribute('aria-label', hamburgerElement.classList.contains('open') ? "Close menu" : "Open menu");
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("tipsModal");
     const openModalButton = document.getElementById("openModal");
     const closeModalButton = document.getElementById("closeModal");
