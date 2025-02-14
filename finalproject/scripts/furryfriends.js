@@ -52,4 +52,44 @@ document.addEventListener("DOMContentLoaded", () => {
         // Append the petDiv to the main element
         mainElement.appendChild(petDiv);
     });
+
+    // Visit tracking functionality
+    const sidebarMessage = document.getElementById("visit-message");
+
+    // Retrieve last visit from localStorage
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    // Get the current date in milliseconds
+    const currentDate = Date.now();
+
+    if (!lastVisit) {
+        // First visit case
+        sidebarMessage.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        // Convert last visit from string to a number
+        const lastVisitDate = Number(lastVisit);
+
+        // Calculate the difference in time (in milliseconds)
+        const timeDifference = currentDate - lastVisitDate;
+
+        // Convert milliseconds to days
+        const daysBetweenVisits = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysBetweenVisits < 1) {
+            sidebarMessage.textContent = "Welcome back! Some furry friends missed you!";
+        } else if (daysBetweenVisits === 1) {
+            sidebarMessage.textContent = "You last visited yesterday. Maybe today is the day you find a new best friend!";
+        } else if (daysBetweenVisits <= 7) {
+            sidebarMessage.textContent = `It's been ${daysBetweenVisits} days! New pets might be waiting just for you!`;
+        } else if (daysBetweenVisits <= 30) {
+            sidebarMessage.textContent = `It's been ${daysBetweenVisits} days! Our animals can't wait to meet you again!`;
+        } else {
+            sidebarMessage.textContent = `It's been a while! Come see the adorable pets looking for their forever home!`;
+        }
+        
+    }
+
+    // Store the current visit date
+    localStorage.setItem("lastVisit", currentDate);
 });
+
