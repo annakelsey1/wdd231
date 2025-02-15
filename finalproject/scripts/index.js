@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 const weatherIcon = document.createElement("img");
 weatherIcon.alt = "Weather icon";
 
-// Function to fetch and display weather
 async function getWeather() {
     const apiKey = '3b28f259ecf1e284f93e059013f7571d';
     const city = 'Orem';
@@ -42,42 +41,37 @@ function displayWeather(data) {
     document.getElementById('temperature').textContent = `${temperature}°F`;
     document.getElementById('condition').textContent = condition.charAt(0).toUpperCase() + condition.slice(1);
 
-    // Call function to update weather image
     updateWeather(condition);
 }
 
-// Function to update weather image based on condition
 function updateWeather(condition) {
     const conditionElement = document.getElementById("condition");
 
     let weatherData = {
-        "clear sky": { img: "images/sunny.png", text: "Sunny" },
-        "few clouds": { img: "images/cloudy.png", text: "Partly Cloudy" },
-        "scattered clouds": { img: "images/cloudy.png", text: "Cloudy" },
-        "broken clouds": { img: "images/cloudy.png", text: "Cloudy" },
-        "shower rain": { img: "images/rainy.png", text: "Rain Showers" },
-        "rain": { img: "images/rainy.png", text: "Rainy" },
-        "thunderstorm": { img: "images/storm.png", text: "Thunderstorm" },
-        "snow": { img: "images/snowy.png", text: "Snowy" },
-        "mist": { img: "images/mist.png", text: "Misty" }
+        "clear sky": { img: "../images/sun.png", text: "Sunny" },
+        "few clouds": { img: "../images/clouds.png", text: "Partly Cloudy" },
+        "scattered clouds": { img: "../images/clouds.png", text: "Cloudy" },
+        "broken clouds": { img: "../images/cloudy.png", text: "Cloudy" },
+        "shower rain": { img: "../images/rain.png", text: "Rain Showers" },
+        "rain": { img: "../images/rain.png", text: "Rainy" },
+        "thunderstorm": { img: "../images/storm.png", text: "Thunderstorm" },
+        "snow": { img: "../images/snow.png", text: "Snowy" },
+        "mist": { img: "../images/mist.png", text: "Misty" }
     };
 
-    // Match weather condition with an image
     let conditionKey = condition.toLowerCase();
     if (weatherData[conditionKey]) {
         weatherIcon.src = weatherData[conditionKey].img;
         conditionElement.textContent = weatherData[conditionKey].text;
     } else {
-        weatherIcon.src = "images/default.png"; // Default image for unknown conditions
+        weatherIcon.src = "images/default.png";
         conditionElement.textContent = condition;
     }
 
-    // Append the image to the weather container
     const weatherContainer = document.querySelector(".weather-container");
     weatherContainer.appendChild(weatherIcon);
 }
 
-// Call the function when the page loads
 getWeather();
 
 
