@@ -81,10 +81,10 @@ picture img {
 }
 
 .adoption-info, .how-to-adopt {
-    background-color: var(--background-color3); /* Light background for contrast */
+    background-color: var(--background-color3);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
     text-align: center;
     max-width: 800px;
@@ -92,14 +92,12 @@ picture img {
     margin-right: auto;
 }
 
-/* Headings */
 .adoption-info h2, .how-to-adopt h2 {
     color: var(--background-color2);
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
-/* Paragraph text */
 .adoption-info p, .how-to-adopt p {
     color: var(--text-color1);
     font-size: 1.1rem;
@@ -170,7 +168,7 @@ footer {
     }
 
     .adoption-info, .how-to-adopt {
-        width: 45%; /* Each section takes up nearly half the screen */
+        width: 45%;
         text-align: left;
     }
 
