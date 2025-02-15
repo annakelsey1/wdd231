@@ -59,10 +59,6 @@ ul.menuLinks li a {
     text-decoration: none;
 }
 
-li.current-menu-item a {
-    background-color: var(--text-color2);
-}
-
 ul.menuLinks {
     list-style-type: none;
 }
