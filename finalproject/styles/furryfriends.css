@@ -76,8 +76,8 @@ body {
 }
 
 #visit-message {
-    background-color: var(--background-color3);
-    color: var(--text-color1);
+    background-color: var(--background-color2);
+    color: var(--text-color2);
     font-family: var(--header-font);
     text-align: center;
     padding: 1rem;
@@ -191,6 +191,8 @@ footer {
         justify-content: flex-end;
         gap: 2rem;
     }
+
+    
 
     .footerNav {
         display: flex;
